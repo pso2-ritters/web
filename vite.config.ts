@@ -3,9 +3,9 @@ import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "web",
-  build: {
-    outDir: "docs",
-  },
-  plugins: [vue()],
+	base: "web",
+	build: {
+		outDir: "docs",
+	},
+	plugins: [vue()],
 });
