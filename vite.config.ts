@@ -1,5 +1,4 @@
 import vue from "@vitejs/plugin-vue";
-import AutoImport from "unplugin-auto-import/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
@@ -9,14 +8,7 @@ export default defineConfig({
 	build: {
 		outDir: "docs",
 	},
-	plugins: [
-		vue(),
-		tsconfigPaths(),
-		AutoImport({
-			imports: ["vitest"],
-			dts: "./src/helpers/auto-imports.d.ts",
-		}),
-	],
+	plugins: [vue(), tsconfigPaths()],
 	resolve: {
 		alias: [{ find: "@this", replacement: "/src" }],
 	},
