@@ -2904,7 +2904,7 @@ function Wi(e) {
 }
 const zi = "/web/vite.svg",
 	qi = "/web/assets/vue-5532db34.svg",
-	Jt = (e) => (Xs("data-v-28abe76a"), (e = e()), Zs(), e),
+	Jt = (e) => (Xs("data-v-527b098c"), (e = e()), Zs(), e),
 	Ji = { class: "card" },
 	Vi = Jt(() => q("p", null, [Ue(" Edit "), q("code", null, "components/HelloWorld.vue"), Ue(" to test HMR ")], -1)),
 	Yi = Jt(() =>
@@ -2962,8 +2962,8 @@ const _r = (e, t) => {
 		for (const [s, r] of t) n[s] = r;
 		return n;
 	},
-	ki = _r(Qi, [["__scopeId", "data-v-28abe76a"]]),
-	Gi = (e) => (Xs("data-v-de8660c2"), (e = e()), Zs(), e),
+	ki = _r(Qi, [["__scopeId", "data-v-527b098c"]]),
+	Gi = (e) => (Xs("data-v-57191012"), (e = e()), Zs(), e),
 	el = Gi(() =>
 		q(
 			"div",
@@ -2985,5 +2985,5 @@ const _r = (e, t) => {
 			return (t, n) => (ar(), dr(ie, null, [el, Te(ki, { msg: "Vite + Vue" })], 64));
 		},
 	});
-const nl = _r(tl, [["__scopeId", "data-v-de8660c2"]]);
+const nl = _r(tl, [["__scopeId", "data-v-57191012"]]);
 Bi(nl).mount("#app");

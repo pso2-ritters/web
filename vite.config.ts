@@ -1,4 +1,5 @@
 import vue from "@vitejs/plugin-vue";
+import AutoImport from "unplugin-auto-import/vite";
 import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
@@ -7,5 +8,11 @@ export default defineConfig({
 	build: {
 		outDir: "docs",
 	},
-	plugins: [vue()],
+	plugins: [
+		vue(),
+		AutoImport({
+			imports: ["vitest"],
+			dts: "./src/helpers/auto-imports.d.ts",
+		}),
+	],
 });
