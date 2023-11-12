@@ -1,5 +1,0 @@
-{
-	"*.{js,ts,vue}": ["prettier --write"],
-	"*.{json,md,scss,yml}": ["prettier --write"],
-	"package.json": "sort-package-json"
-}
