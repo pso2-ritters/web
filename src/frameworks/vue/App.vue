@@ -2,6 +2,10 @@
 import { mdiAntenna, mdiFileWordBox, mdiHome, mdiInformation, mdiMenuClose, mdiMenuOpen } from "@mdi/js";
 import { ref } from "vue";
 
+import SS_20230415_200600_004 from "@this/assets/images/ss/pso20230415_200600_004.jpg";
+import SS_20230415_200628_007 from "@this/assets/images/ss/pso20230415_200628_007.jpg";
+import SS_20230415_200647_008 from "@this/assets/images/ss/pso20230415_200647_008.jpg";
+
 const drawer = ref(true);
 </script>
 
@@ -54,9 +58,9 @@ const drawer = ref(true);
 					<v-alert-title>工事中</v-alert-title>
 				</v-alert>
 				<v-carousel cycle show-arrows="hover">
-					<v-carousel-item src="/images/ss/pso20230415_200600_004.jpg" cover></v-carousel-item>
-					<v-carousel-item src="/images/ss/pso20230415_200628_007.jpg" cover></v-carousel-item>
-					<v-carousel-item src="/images/ss/pso20230415_200647_008.jpg" cover></v-carousel-item>
+					<v-carousel-item :src="SS_20230415_200600_004" cover></v-carousel-item>
+					<v-carousel-item :src="SS_20230415_200628_007" cover></v-carousel-item>
+					<v-carousel-item :src="SS_20230415_200647_008" cover></v-carousel-item>
 				</v-carousel>
 				<p class="text-right">（C）SEGA　PHANTASY STAR ONLINE 2</p>
 			</v-container>
