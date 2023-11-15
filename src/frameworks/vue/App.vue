@@ -55,7 +55,7 @@ const drawer = ref(true);
 					<v-list-item-title>PSO2@TEAM†Ritters†</v-list-item-title>
 					<v-list-item-subtitle>@pso2ritters</v-list-item-subtitle>
 				</v-list-item>
-				<v-list-item link href="https://twitter.com/pso2ritters" target="_blank">
+				<v-list-item link href="https://twitter.com/i/lists/1429426751025737738" target="_blank">
 					<template #prepend>
 						<v-icon :icon="mdiCardAccountDetails" />
 					</template>
