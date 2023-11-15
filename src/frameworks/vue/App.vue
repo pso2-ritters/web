@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { mdiAntenna, mdiCardAccountDetails, mdiHome, mdiInformation, mdiMenuClose, mdiMenuOpen } from "@mdi/js";
+import {
+	mdiAntenna,
+	mdiCardAccountDetails,
+	mdiGithub,
+	mdiHome,
+	mdiInformation,
+	mdiMenuClose,
+	mdiMenuOpen,
+} from "@mdi/js";
 import { ref } from "vue";
 
 import SS_20230415_200600_004 from "@this/assets/images/ss/pso20230415_200600_004.jpg";
@@ -71,6 +79,14 @@ const drawer = ref(true);
 				<v-icon v-else :icon="mdiMenuClose" />
 			</v-app-bar-nav-icon>
 			<v-app-bar-title>†Ritters† in PSO2NGS Ship1</v-app-bar-title>
+			<v-spacer></v-spacer>
+
+			<v-btn href="https://github.com/pso2-ritters/web" class="me-2 text-none" border>
+				<template #prepend>
+					<v-icon :icon="mdiGithub" size="x-large" />
+				</template>
+				github
+			</v-btn>
 		</v-app-bar>
 
 		<v-main>
