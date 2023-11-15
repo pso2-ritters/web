@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 
-import "./style.css";
-import App from "./frameworks/vue/App.vue";
+import "vuetify/styles";
+import { App, Plugins } from "./frameworks/vue";
 
-createApp(App).mount("#app");
+createApp(App).use(Plugins.Vuetify).mount("#app");
