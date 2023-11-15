@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiAntenna, mdiFileWordBox, mdiHome, mdiInformation, mdiMenuClose, mdiMenuOpen } from "@mdi/js";
+import { mdiAntenna, mdiCardAccountDetails, mdiHome, mdiInformation, mdiMenuClose, mdiMenuOpen } from "@mdi/js";
 import { ref } from "vue";
 
 import SS_20230415_200600_004 from "@this/assets/images/ss/pso20230415_200600_004.jpg";
@@ -10,38 +10,59 @@ const drawer = ref(true);
 </script>
 
 <template>
-	<v-app id="inspire">
-		<v-navigation-drawer v-model="drawer">
-			<v-list-item>
-				<v-list-item-title>
-					<v-icon class="navigation-list-icon" :icon="mdiFileWordBox" />
-					Wiki
-				</v-list-item-title>
-				<v-list-item-subtitle>各ページへのリンク集</v-list-item-subtitle>
-			</v-list-item>
-			<v-divider></v-divider>
-			<v-list-item link href="https://github.com/pso2-ritters/web/wiki" target="_blank">
-				<v-list-item-title>
-					<v-icon class="navigation-list-icon" :icon="mdiHome" />
-					トップ
-				</v-list-item-title>
-			</v-list-item>
-			<v-list-item
-				link
-				href="https://github.com/pso2-ritters/web/wiki/%23%E4%BB%8A%E6%97%A5%E3%81%AE%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E3%82%BA"
-				target="_blank"
-			>
-				<v-icon class="navigation-list-icon" :icon="mdiAntenna" />
-				#今日のリッターズ
-			</v-list-item>
-			<v-list-item
-				link
-				href="https://github.com/pso2-ritters/web/wiki/%E6%9C%89%E7%9B%8A%E6%83%85%E5%A0%B1"
-				target="_blank"
-			>
-				<v-icon class="navigation-list-icon" :icon="mdiInformation" />
-				有益情報
-			</v-list-item>
+	<v-app>
+		<v-navigation-drawer v-model="drawer" :width="300">
+			<v-list>
+				<v-list-subheader>Wiki</v-list-subheader>
+
+				<v-list-item link href="https://github.com/pso2-ritters/web/wiki" target="_blank">
+					<template #prepend>
+						<v-icon :icon="mdiHome" />
+					</template>
+					<v-list-item-title>トップ</v-list-item-title>
+					<v-list-item-subtitle>Home</v-list-item-subtitle>
+				</v-list-item>
+				<v-list-item
+					link
+					href="https://github.com/pso2-ritters/web/wiki/%23%E4%BB%8A%E6%97%A5%E3%81%AE%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC%E3%82%BA"
+					target="_blank"
+				>
+					<template #prepend>
+						<v-icon :icon="mdiAntenna" />
+					</template>
+					<v-list-item-title>#今日のリッターズ</v-list-item-title>
+					<v-list-item-subtitle>動画やSSなど</v-list-item-subtitle>
+				</v-list-item>
+				<v-list-item
+					link
+					href="https://github.com/pso2-ritters/web/wiki/%E6%9C%89%E7%9B%8A%E6%83%85%E5%A0%B1"
+					target="_blank"
+				>
+					<template #prepend>
+						<v-icon :icon="mdiInformation" />
+					</template>
+					<v-list-item-title>有益情報</v-list-item-title>
+					<v-list-item-subtitle>GShade設定など</v-list-item-subtitle>
+				</v-list-item>
+				<v-divider></v-divider>
+
+				<v-list-subheader>X (旧Twitter)</v-list-subheader>
+
+				<v-list-item link href="https://twitter.com/pso2ritters" target="_blank">
+					<template #prepend>
+						<v-icon :icon="mdiCardAccountDetails" />
+					</template>
+					<v-list-item-title>PSO2@TEAM†Ritters†</v-list-item-title>
+					<v-list-item-subtitle>@pso2ritters</v-list-item-subtitle>
+				</v-list-item>
+				<v-list-item link href="https://twitter.com/pso2ritters" target="_blank">
+					<template #prepend>
+						<v-icon :icon="mdiCardAccountDetails" />
+					</template>
+					<v-list-item-title>†Ritters†メンバー</v-list-item-title>
+					<v-list-item-subtitle>@siro14142356</v-list-item-subtitle>
+				</v-list-item>
+			</v-list>
 		</v-navigation-drawer>
 
 		<v-app-bar>
